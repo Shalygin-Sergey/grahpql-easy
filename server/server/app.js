@@ -1,0 +1,11 @@
+const { graphqlHTTP } = require('express-graphql');
+const express = require('express');
+
+const app = express();
+const PORT = 3005;
+
+app.use('/graphql', graphqlHTTP({}))
+
+app.listen(PORT, err => {
+  err ? console.log(error) : console.log('Server started!');;
+})
